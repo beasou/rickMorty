@@ -3,12 +3,13 @@ import {createGlobalStyle} from 'styled-components'
 export const GlobalStyle = createGlobalStyle`
 
 :root{
-    --green-text: #8DE285;
+    --green-100: #8DE285;
     --green: #4af727;
-    --blue-text: #9ACEE8;
+    --blue-100: #9ACEE8;
     --blue:#22A2BD;
     --background: #060620;
     --background-body: #070715;
+    --title: font-family: 'Creepster', cursive;
 }
 *{
     margin: 0;
@@ -27,6 +28,31 @@ html{
 body{
     background: var(--background-body);
     -webkit-font-smoothing: antialiased;
+}
+
+body, input, button {
+    font-family: 'Patrick Hand SC', cursive;
+    font-weight: 400;
+}
+
+h1{
+    color: var(--blue);
+    -webkit-text-stroke: 1px var(--green);
+    text-shadow: 0 0 3px var(--green-100);
+    font-family: 'Creepster', cursive;
+}
+
+h1, h2, h3, h4, h5, h6, strong{
+    font-weight: 600;
+}
+
+
+button{
+    cursor: pointer;
+}
+[disabled]{
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 `
