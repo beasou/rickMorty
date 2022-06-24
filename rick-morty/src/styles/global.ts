@@ -7,9 +7,10 @@ export const GlobalStyle = createGlobalStyle`
     --green: #4af727;
     --blue-100: #9ACEE8;
     --blue:#22A2BD;
-    --background: #060620;
-    --background-body: #070715;
+    --background: #070715 ;
+    --background-body: #060621;
     --title: font-family: 'Creepster', cursive;
+    --text: list-style-type: none;
 }
 *{
     margin: 0;

@@ -1,18 +1,27 @@
 
-import logo from '../../assets/rick-and-morty-portal.svg'
+import portal from '../../assets/portal.svg'
+import rick from '../../assets/logo.svg'
+import { Container } from './style'
 
 export function Header(){
     return(
-        <header>
+        <Container>
             <div className="logo">
-                <img src={logo} alt="imagem" />
+                <img src={portal} alt="imagem" />
+                <img src={rick} alt="imagem" />
             </div>
             <nav>
-                <li><h1>Caracters</h1></li>
-                <li>Locations</li>
-                <li>Episodes</li>
+                <li>
+                    <a href="">Caracters</a>
+                </li>
+                <li>
+                    <a href="">Locations</a>
+                </li>
+                <li>
+                    <a href="">Episodes</a>
+                </li>
             </nav>
-            <hr />
-        </header>
+            
+        </Container>
     )
 }
