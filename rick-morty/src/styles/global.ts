@@ -29,7 +29,7 @@ body{
     -webkit-font-smoothing: antialiased;
 }
 
-body, input, button, p {
+body, input, button, p, select {
     font-family: 'Patrick Hand SC', cursive;
     font-weight: 400;
     color: #fff;

@@ -1,30 +1,40 @@
-import {Container} from './style'
+import {Container, Content, Button} from './style'
 
 export function Form(){
     return( 
     <Container>
         <form>
-            <fieldset>
-                <legend>Fórmulário</legend>
+            <Content>
                 <p>
-                    <label>Filter by name...</label>
-                    <input type="text"/>
+                    <input type="text" placeholder='Filter by name...'/>
                 </p>
                 <p>
-                    <label>Species</label>
-                    <select name="species" id="species"></select>
+                    <select name="species" id="species">
+                        <option value="" selected hidden>Species</option>
+                        <option value="">teste</option>
+                    </select>
                 </p>
+               
                 <p>
-                    <label>Gender</label>
-                    <select name="gender" id="gender"></select>
-                </p>
-                <p>
-                    <label>Status</label>
-                    <select name="status" id="status"></select>
+                    <select name="species" id="species">
+                        <option value="" selected hidden>Gender</option>
+                        <option value="">teste</option>
+                    </select>
                 </p>
                 
-            </fieldset>
+                <p>
+                    <select name="species" id="species">
+                        <option value="" selected hidden >Status</option>
+                        <option value="">teste</option>
+                    </select>
+                </p>
+                </Content>
+                <Button>
+                    <button>Loading ..</button>
+                </Button>
+            
         </form>
+        
     </Container>
     )
 }
