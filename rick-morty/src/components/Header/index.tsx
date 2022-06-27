@@ -1,5 +1,5 @@
 
-import portal from '../../assets/portal.svg'
+import portal from '../../assets/rick-and-morty-portal.svg'
 import rick from '../../assets/logo.svg'
 import { Container } from './style'
 

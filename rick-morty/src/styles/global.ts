@@ -9,8 +9,6 @@ export const GlobalStyle = createGlobalStyle`
     --blue:#22A2BD;
     --background: #070715 ;
     --background-body: #060621;
-    --title: font-family: 'Creepster', cursive;
-    --text: list-style-type: none;
 }
 *{
     margin: 0;
@@ -31,9 +29,10 @@ body{
     -webkit-font-smoothing: antialiased;
 }
 
-body, input, button {
+body, input, button, p {
     font-family: 'Patrick Hand SC', cursive;
     font-weight: 400;
+    color: #fff;
 }
 
 h1{
