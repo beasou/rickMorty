@@ -3,7 +3,6 @@ import {Container, Content, Button} from './style'
 export function Form(){
     return( 
     <Container>
-        <form>
             <Content>
                 <p>
                     <input type="text" placeholder='Filter by name...'/>
@@ -31,10 +30,7 @@ export function Form(){
                 </Content>
                 <Button>
                     <button>Loading ..</button>
-                </Button>
-            
-        </form>
-        
+                </Button>  
     </Container>
     )
 }
