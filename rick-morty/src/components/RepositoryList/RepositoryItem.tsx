@@ -1,7 +1,6 @@
-import img from '../../assets/morty-talking.svg'
-
 interface RepositoryItemProps{
     repository:{
+        id:string,
         image:string,
         name: string,
         status: string,
@@ -14,8 +13,10 @@ export function RepositoryItem(props: RepositoryItemProps){
     return(
         <li>
             <img src={props.repository.image} alt="Imagem" />
-            <h1>{props.repository.name}</h1>
+            <h2>{props.repository.name}</h2>
+            <p>{props.repository.status}</p>
             <p>{props.repository.species}</p>
+            <p>{props.repository.gender}</p>
         </li>
     )
 }

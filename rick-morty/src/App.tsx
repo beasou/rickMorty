@@ -1,6 +1,6 @@
 import { Form } from "./components/Form";
 import { Header } from "./components/Header";
-import { List } from "./components/List";
+import { RepositoryList } from "./components/RepositoryList";
 import { GlobalStyle } from "./styles/global";
 
 export function App() {
@@ -9,7 +9,7 @@ export function App() {
         <Header />
         <hr />
         <Form />
-        <List />
+        <RepositoryList />
         <GlobalStyle />
     </>
   );
