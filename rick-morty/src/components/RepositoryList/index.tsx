@@ -2,7 +2,7 @@ import { useState, useEffect} from 'react'
 import { RepositoryItem } from './RepositoryItem'
 import { Container } from './style'
 
-const apiRickMortCharacter = "https://rickandmortyapi.com/api/character"
+const apiRickMortCharacter = "https://rickandmortyapi.com/api/character?page="
 
 interface Repository{
         id:string,
@@ -13,11 +13,18 @@ interface Repository{
         gender: string, 
 }
 
+
 export function RepositoryList(){
+    const [page, setPage] = useState(1)
+    function increment(){
+        setPage(page + 1) 
+        console.log(page.toString())
+    }
+    
     const [repositories, setRepositories] = useState<Repository[]>([])
 
     useEffect(() => {
-        fetch(apiRickMortCharacter)
+        fetch(apiRickMortCharacter + page.toString()) 
         .then(response => response.json())
         .then(data => setRepositories(data.results))
     }, [])
@@ -29,6 +36,7 @@ export function RepositoryList(){
                     return  <RepositoryItem key={repository.id}  repository={repository}/>
                 })}
             </ul>
+            <button onClick={increment}>Loading More..</button>  
         </Container>
     )
 }

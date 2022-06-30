@@ -1,4 +1,4 @@
-import {Container, Content, Button} from './style'
+import {Container, Content } from './style'
 
 export function Form(){
     return( 
@@ -28,9 +28,6 @@ export function Form(){
                     </select>
                 </p>
                 </Content>
-                <Button>
-                    <button>Loading ..</button>
-                </Button>  
     </Container>
     )
 }
