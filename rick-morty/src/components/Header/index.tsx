@@ -11,17 +11,10 @@ export function Header(){
                 <img src={rick} alt="imagem" />
             </div>
             <nav>
-                <li>
-                    <a href="">Caracters</a>
-                </li>
-                <li>
-                    <a href="">Locations</a>
-                </li>
-                <li>
-                    <a href="">Episodes</a>
-                </li>
+                <a >Caracters</a>
+                    <a >Locations</a>
+                    <a >Episodes</a>
             </nav>
-            
         </Container>
     )
 }

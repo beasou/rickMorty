@@ -27,6 +27,11 @@ export const Container = styled.div `
             margin-top: 10px;
         }
     }
+
+    a{
+        color: #fff;
+        text-decoration: none;
+    }
     
    
 `

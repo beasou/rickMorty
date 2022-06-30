@@ -21,23 +21,25 @@ export const Container = styled.header `
     nav{
         display: flex;
         
-        
-        li{
-            margin-left: 20px;
-            list-style-type: none;
-        }
-
         a{
+            display:inline-block;
+            position: relative;
             color: #FFF;
             text-decoration: none;
+            cursor: pointer;
+            & + a{
+                margin-left: 2rem;
+            }
+
+            &:hover{
+                color: var(--blue);
+                -webkit-text-stroke: 1px var(--green);
+                text-shadow: 0 0 3px var(--green-100);
+                font-family: 'Creepster', cursive;
+             }
         }
 
-        a:hover{
-            color: var(--blue);
-            -webkit-text-stroke: 1px var(--green);
-            text-shadow: 0 0 3px var(--green-100);
-            font-family: 'Creepster', cursive;
-        }
+       
 
     }
 `
