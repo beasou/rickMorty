@@ -17,14 +17,19 @@ export function Form(){
                 <p>
                     <select name="species" id="species">
                         <option value="" selected hidden>Gender</option>
-                        <option value="">teste</option>
+                        <option value="">female</option>
+                        <option value="">male</option>
+                        <option value="">genderless</option>
+                        <option value="">unknown</option>
                     </select>
                 </p>
                 
                 <p>
                     <select name="species" id="species">
                         <option value="" selected hidden >Status</option>
-                        <option value="">teste</option>
+                        <option value="">alive</option>
+                        <option value="">dead</option>
+                        <option value="">unknown</option>
                     </select>
                 </p>
                 </Content>

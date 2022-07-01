@@ -6,7 +6,7 @@ export const Container = styled.div `
     justify-content: center;
 
     ul{
-        width: 100%;
+        width: 200vh;
         display: flex ;
         align-items: center;
         justify-content: center;
@@ -23,8 +23,11 @@ export const Container = styled.div `
         }
 
         h2{
+            display: flex;
+            align-items: center;
             width: 100%;
-            margin-top: 10px;
+            height: 50px;
+            margin-top: 5px;
         }
     }
 

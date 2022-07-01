@@ -54,6 +54,7 @@ export const Container = styled.form `
             select:hover,input:hover{
                 box-shadow: 2.5px .5px 3px #A9A9A9;
             }
+
         }
 `
    

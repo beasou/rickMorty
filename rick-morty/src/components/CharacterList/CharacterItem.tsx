@@ -1,4 +1,4 @@
-interface RepositoryItemProps{
+interface CharacterItemProps{
     repository:{
         id:string,
         image:string,
@@ -9,7 +9,7 @@ interface RepositoryItemProps{
     }
 }
 
-export function RepositoryItem(props: RepositoryItemProps){
+export function CharacterItem(props: CharacterItemProps){
     return(
         <li>
             <a href="#">
