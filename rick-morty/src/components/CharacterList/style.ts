@@ -12,10 +12,13 @@ export const Container = styled.div `
         justify-content: center;
         flex-wrap: wrap;
         
+        
         li{
-            width: 300px;
+            width: 250px;
             margin: 20px;
             list-style: none;
+            border-radius: .5rem;
+            
         }
         img{
             width: 100%;
@@ -24,13 +27,12 @@ export const Container = styled.div `
 
         h2{
             display: flex;
-            align-items: center;
-            width: 100%;
+            align-items: flex-start;
             height: 50px;
-            margin-top: 5px;
+            font-size: 1.3rem;
         }
     }
-
+    
     a{
         color: #fff;
         text-decoration: none;
