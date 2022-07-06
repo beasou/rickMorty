@@ -15,8 +15,6 @@ export function CharacterItem(props: CharacterItemProps){
             <a href="#">
                 <img src={props.repository.image} alt="Imagem" />
                 <h2>{props.repository.name}</h2>
-                <p>{props.repository.species}</p>
-                <p>{props.repository.gender}</p>
             </a>
         </li>
     )
