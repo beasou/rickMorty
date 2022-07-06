@@ -1,18 +1,24 @@
 import { CharacterItem } from './CharacterItem'
 import { Container } from './style'
-import {Character} from '../../types'
+import {Character, CharacterModalProps} from '../../types'
+
 
 interface CharacterListProps{
     characters: Character[];
 }
 
-export function CharacterList(props: CharacterListProps){
+export function CharacterList(props: CharacterListProps,{onOpenNewCharacterModal}: CharacterModalProps){
+
 
     return (
             <Container>
                 <ul>
-                    {props.characters.map(repository => {
-                        return  <CharacterItem key={repository.id}  repository={repository}/>
+                    {props.characters.map(character => {
+                        return  <CharacterItem 
+                                    key={character.id}  
+                                    character={character}
+                                />
+                                    
                     })}
                 </ul>
             </Container>

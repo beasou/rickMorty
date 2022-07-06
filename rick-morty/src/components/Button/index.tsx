@@ -1,4 +1,3 @@
-import { CharacterList } from '../CharacterList'
 import {Content} from './style'
 
 interface ButtonProps{
