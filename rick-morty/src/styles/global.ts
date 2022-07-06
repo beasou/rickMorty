@@ -74,5 +74,10 @@ button{
     padding: 3rem;
     position: relative;
     border-radius: .24rem;
+
+    img{
+        border-radius: 50%;
+        width: 10rem;
+    }
 }
 `
