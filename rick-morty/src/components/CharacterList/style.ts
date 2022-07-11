@@ -6,15 +6,15 @@ export const Container = styled.div `
     justify-content: center;
 
     ul{
-        width: 200vh;
-        display: flex ;
+        width: 150vh;
+        display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
         
         
         li{
-            width: 150px;
+            width: 220px;
             margin: 20px;
             list-style: none;
             border-radius: .5rem;
@@ -27,10 +27,10 @@ export const Container = styled.div `
 
         h2{
             display: flex;
-            align-items: center;
+            
             width: 100%;
             height: 50px;
-            margin-top: 5px;
+            
             font-size: 1.3rem;
             
         }

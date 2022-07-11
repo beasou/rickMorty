@@ -5,8 +5,15 @@ import { Header } from "../components/Header"
 import { CharacterList } from "../components/CharacterList"
 import { api } from "../services/api"
 import {Character} from "../types"
-import {NewCharacterModal} from "../components/NewCharacterModal"
-import { CharacterItem } from "../components/CharacterList/CharacterItem"
+
+
+export const Location = () => {
+  const [location, setLocation] = useState<any[]>([])
+  useEffect(()=>{
+   api.get(`location/`)
+    .then(response => response  )
+  })
+}
 
 export const Characters = () => {
     
@@ -16,15 +23,12 @@ export const Characters = () => {
     useEffect(() => {
         api.get('/character?page='+ page.toString())
         .then(response => setCharacters(response.data.results))
-       
     }, [increment]) 
 
     function increment(){
       setPage(page + 1) 
       window.scrollTo(0,  0);
     }
-
-
     return (
         <>
             <Header />

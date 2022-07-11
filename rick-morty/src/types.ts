@@ -1,5 +1,5 @@
 export interface Character{
-    id:string,
+    id:number,
     image:string,
     name: string,
     status: string,
@@ -13,7 +13,7 @@ export interface Character{
 
 export interface CharacterItemProps{
     character:{
-        id:string,
+        id:number,
         image:string,
         name: string,
         status: string,

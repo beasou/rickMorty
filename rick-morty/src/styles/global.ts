@@ -42,6 +42,12 @@ h1{
     font-family: 'Creepster', cursive;
 }
 
+
+
+h3{
+    color: var(--blue-100)
+}
+
 h1, h2, h3, h4, h5, h6, strong{
     font-weight: 600;
 }
@@ -56,7 +62,7 @@ button{
 }
 
 .react-modal-overlay{
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.9);
     position: fixed;
     top: 0;
     bottom: 0;
@@ -69,15 +75,39 @@ button{
 
 .react-modal-content{
     width:100%;
-    max-width: 576px;
+    height: 650px;
+    max-width: 600px;
     background: var(--background);
-    padding: 3rem;
+    padding: 1.5rem;
     position: relative;
     border-radius: .24rem;
+    
 
-    img{
-        border-radius: 50%;
-        width: 10rem;
+    .characterDetails{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+        img{
+            margin-bottom: .5rem;
+            border-radius: 50%;
+            width: 10rem;
+            border-style: solid;
+            border-color: var(--green-100) 
+        }
+
+    }
+    .characterInformations{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 4rem 0  4rem;
+        
+        li{
+            list-style-type: none;
+            margin-top: 1rem;
+            
+        }
     }
 }
 `
