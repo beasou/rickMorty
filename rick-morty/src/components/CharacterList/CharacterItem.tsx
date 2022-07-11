@@ -62,7 +62,13 @@ export function CharacterItem(props: CharacterItemProps){
                     </div>
                     <div className='episodes'>
                         <h2>Episodes</h2>
-                        teste
+                        <ul>
+                            <li>
+                                <h3>Teste</h3>
+                                <p>{}</p>
+                            </li>
+                        </ul>
+                        
                     </div>
                 </div>
                 
