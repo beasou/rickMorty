@@ -48,15 +48,11 @@ export function CharacterItem(props: CharacterItemProps){
                             </li>
                             <li>
                                 <h3>Origin</h3>
-                                
+                                <p>{props.character.origin.name}</p>
                             </li>
                             <li>
-                                <h3>Type</h3>
-                                <p>{props.character.type}</p>
-                            </li>
-                            <li>
-                                <h3>Location</h3>
-                                <p>{}</p>
+                              <h3>Location</h3>
+                              <p>{props.character.location.name}</p>
                             </li>
                         </ul>
                     </div>
@@ -64,8 +60,9 @@ export function CharacterItem(props: CharacterItemProps){
                         <h2>Episodes</h2>
                         <ul>
                             <li>
-                                <h3>Teste</h3>
+                                <h3>episodio nome</h3>
                                 <p>{}</p>
+
                             </li>
                         </ul>
                         

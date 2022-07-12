@@ -9,10 +9,10 @@ import {Character} from "../types"
 
 export const Location = () => {
   const [location, setLocation] = useState<any[]>([])
-  useEffect(()=>{
-   api.get(`location/`)
-    .then(response => response  )
-  })
+ // useEffect(()=>{
+   api.get(`/location`)
+    .then(response => console.log(response)  )
+ // })
 }
 
 export const Characters = () => {
