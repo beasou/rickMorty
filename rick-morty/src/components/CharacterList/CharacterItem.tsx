@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import {CharacterItemProps} from '../../types'
 import Modal from 'react-modal'
+import { CharacterEpisode } from './CharacterEpisode';
 
 
 export function CharacterItem(props: CharacterItemProps){
@@ -13,6 +14,7 @@ export function CharacterItem(props: CharacterItemProps){
     function handleCloseNewCharacterModal(){
         setCharacterModalOpen(false)
     }
+
     return(
         <li>
             <a href="#" onClick={handleOpenNewCharacterModal}>
@@ -59,11 +61,7 @@ export function CharacterItem(props: CharacterItemProps){
                     <div className='episodes'>
                         <h2>Episodes</h2>
                         <ul>
-                            <li>
-                                <h3>episodio nome</h3>
-                                <p>{}</p>
-
-                            </li>
+                            <CharacterEpisode/>
                         </ul>
                         
                     </div>
