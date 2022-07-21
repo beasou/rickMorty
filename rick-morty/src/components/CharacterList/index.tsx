@@ -8,8 +8,6 @@ interface CharacterListProps{
 }
 
 export function CharacterList(props: CharacterListProps,{onOpenNewCharacterModal}: CharacterModalProps){
-
-
     return (
             <Container>
                 <ul>

@@ -8,28 +8,28 @@ export function Form(){
                     <input type="text" placeholder='Filter by name...'/>
                 </p>
                 <p>
-                    <select name="species" id="species">
-                        <option value="" selected hidden>Species</option>
-                        <option value="">teste</option>
+                    <select name="species" id="species" defaultValue="0">
+                        <option value="0"  hidden>Species</option>
+                        <option value="1">teste</option>
                     </select>
                 </p>
                
                 <p>
-                    <select name="species" id="species">
-                        <option value="" selected hidden>Gender</option>
-                        <option value="">female</option>
-                        <option value="">male</option>
-                        <option value="">genderless</option>
-                        <option value="">unknown</option>
+                    <select name="gender" id="gender" defaultValue="0">
+                        <option value="0"  hidden>Gender</option>
+                        <option value="1">female</option>
+                        <option value="2">male</option>
+                        <option value="3">genderless</option>
+                        <option value="4">unknown</option>
                     </select>
                 </p>
                 
                 <p>
-                    <select name="species" id="species">
-                        <option value="" selected hidden >Status</option>
-                        <option value="">alive</option>
-                        <option value="">dead</option>
-                        <option value="">unknown</option>
+                    <select name="status" id="status" defaultValue="0">
+                        <option value="0"  hidden >Status</option>
+                        <option value="1">alive</option>
+                        <option value="2">dead</option>
+                        <option value="3">unknown</option>
                     </select>
                 </p>
                 </Content>

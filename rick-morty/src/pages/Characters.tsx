@@ -7,14 +7,6 @@ import { api } from "../services/api"
 import {Character} from "../types"
 
 
-export const Location = () => {
-  const [location, setLocation] = useState<any[]>([])
- // useEffect(()=>{
-   api.get(`/location`)
-    .then(response => console.log(response)  )
- // })
-}
-
 export const Characters = () => {
     
     const [characters, setCharacters] = useState<Character[]>([])
@@ -22,13 +14,14 @@ export const Characters = () => {
     
     useEffect(() => {
         api.get('/character?page='+ page.toString())
-        .then(response => setCharacters(response.data.results))
-    }, [increment]) 
+        .then(response => console.log(response.data.results))
+    }, [page]) 
 
     function increment(){
       setPage(page + 1) 
       window.scrollTo(0,  0);
-    }
+    } 
+
     return (
         <>
             <Header />
