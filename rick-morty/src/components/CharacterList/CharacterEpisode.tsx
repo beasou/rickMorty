@@ -24,17 +24,17 @@ export function CharacterEpisode(props: CharacterEpisodeProps) {
   }, [])
 
     return (
-        <li>
+        <>
             {episodes.map((episode => {
                 return (
-                    <>
+                    <li>
                         <h3>{episode.episode}</h3>
                         <p>{episode.name}</p>
                         <p>{episode.air_date}</p>
-                    </>
+                    </li>
                 )
-            }))}
-        </li>
+            })).slice(0,4)}
+        </>
     )
 
 }

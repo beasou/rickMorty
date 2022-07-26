@@ -71,6 +71,7 @@ button{
     display:flex;
     align-items: center;
     justify-content: center;
+   
 }
 
 .react-modal-content{
@@ -106,7 +107,6 @@ button{
         li{
             list-style-type: none;
             margin-top: 1rem;
-            
         }
     }
 }
