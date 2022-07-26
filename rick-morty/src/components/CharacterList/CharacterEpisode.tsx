@@ -1,13 +1,40 @@
-import { useState } from "react";
-import { Character, CharacterItemProps } from "../../types";
+import { useEffect, useState } from "react";
+import { api } from "../../services/api";
 
-export function CharacterEpisode(props: CharacterItemProps){
-    const [episodes, setEpisodes] = useState<Character[]>([])
+interface CharacterEpisodeProps {
+  idEpisodes: string[];
+}
 
-    return(
+interface episodes {
+  id: number;
+  air_date: string;
+  created: string;
+  episode: string;
+  name: string;
+  url: string;
+}
+
+export function CharacterEpisode(props: CharacterEpisodeProps) {
+  const [episodes, setEpisode] = useState<episodes[]>([]);
+
+  useEffect(() => {
+    api.get("/episode/" + props.idEpisodes).then((response) => {
+      setEpisode(response.data);
+    });
+  }, [])
+
+    return (
         <li>
-            <h3>episodio nome</h3>
-            <p>{props.character.episode.slice(1,2)}</p>
+            {episodes.map((episode => {
+                return (
+                    <>
+                        <h3>{episode.episode}</h3>
+                        <p>{episode.name}</p>
+                        <p>{episode.air_date}</p>
+                    </>
+                )
+            }))}
         </li>
     )
+
 }

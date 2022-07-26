@@ -14,7 +14,7 @@ export const Characters = () => {
     
     useEffect(() => {
         api.get('/character?page='+ page.toString())
-        .then(response => console.log(response.data.results))
+        .then(response => setCharacters(response.data.results))
     }, [page]) 
 
     function increment(){
