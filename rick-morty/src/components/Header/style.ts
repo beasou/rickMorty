@@ -30,6 +30,7 @@ export const Container = styled.header `
             & + a{
                 margin-left: 2rem;
             }
+            transition: color 0.2s;
 
             &:hover{
                 color: var(--blue);

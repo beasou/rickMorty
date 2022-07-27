@@ -19,10 +19,16 @@ export function CharacterEpisode(props: CharacterEpisodeProps) {
 
   useEffect(() => {
     api.get("/episode/" + props.idEpisodes).then((response) => {
-      setEpisode(response.data);
+      if(Array.isArray(response.data)){
+        setEpisode(response.data);
+      }else{
+        setEpisode([response.data])
+      }
+        
     });
   }, [])
 
+  console.log(episodes)
     return (
         <>
             {episodes.map((episode => {
