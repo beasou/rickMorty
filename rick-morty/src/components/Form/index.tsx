@@ -1,11 +1,24 @@
+import { useEffect, useState } from 'react'
+import { api } from '../../services/api'
 import {Container, Content } from './style'
 
 export function Form(){
+    const [filterByName, setFilterByName] = useState('')
+    
+    useEffect(()=>{
+        api.get("/character/?name=" + filterByName)
+        .then((response) =>{console.log(response.data.results)})
+    },[])
+console.log(filterByName)
     return( 
     <Container>
             <Content>
                 <p>
-                    <input type="text" placeholder='Filter by name...'/>
+                    <input type="text" 
+                           value={filterByName} 
+                           placeholder='Filter by name...'
+                           onChange={(element)=> setFilterByName(element.target.value)}
+                    />
                 </p>
                 <p>
                     <select name="species" id="species" defaultValue="0">
