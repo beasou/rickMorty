@@ -28,7 +28,6 @@ export function CharacterEpisode(props: CharacterEpisodeProps) {
     });
   }, [])
 
-  console.log(episodes)
     return (
         <>
             {episodes.map((episode => {
