@@ -27,7 +27,7 @@ export function Form() {
             value={filterByName}
             placeholder="Filter by name..."
             onChange={(element) => setFilterByName(element.target.value)}
-            onKeyDown={handleSaveFilterByName}
+            onKeyPress={handleSaveFilterByName}
           />
         </p> 
         <p>
