@@ -1,35 +1,24 @@
-import { useEffect, useState } from "react";
-import { api } from "../../services/api";
-import { Character } from "../../types";
 import { Container, Content } from "./style";
 
-export function Form() {
-  const [filterByName, setFilterByName] = useState("");
-  const [savedName, setSavedName] = useState("")
+interface FilterProps {
+  handleSaveFilterByName: () => void;
+  setFilterByName: (event: any) => void;
+  filterByName: string;
+}
 
-  useEffect(() => {
-    api.get("/character/?name=" + savedName).then((response) => {
-      console.log(response.data.results);
-    });
-  }, [handleSaveFilterByName]);
-
-  
-  function handleSaveFilterByName() {
-    setSavedName(filterByName) 
-  }
-
+export function Form(props: FilterProps) {
   return (
     <Container>
       <Content>
         <p>
           <input
             type="text"
-            value={filterByName}
+            value={props.filterByName}
             placeholder="Filter by name..."
-            onChange={(element) => setFilterByName(element.target.value)}
-            onKeyPress={handleSaveFilterByName}
+            onChange={(event) => props.setFilterByName(event.target.value)}
+            onKeyPress={props.handleSaveFilterByName}
           />
-        </p> 
+        </p>
         <p>
           <select name="species" id="species" defaultValue="0">
             <option value="0" hidden>

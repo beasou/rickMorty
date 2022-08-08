@@ -7,7 +7,7 @@ export const Locations = () =>{
         <>
             <Header />
             <hr />
-            <Form />
+      
         </>
     )
 }
