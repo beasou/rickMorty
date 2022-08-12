@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "../components/Button";
-import { Form } from "../components/Form";
+import { CharacterFilter } from "../components/CharacterFilter";
 import { Header } from "../components/Header";
 import { CharacterList } from "../components/CharacterList";
 import { api } from "../services/api";
@@ -16,7 +16,7 @@ export const Characters = () => {
   useEffect(() => {
     api
       .get("/character?page=" + page.toString())
-      .then((response) => setCharacters(response.data.results));
+      .then((response) => console.log(response.data.results));
   }, [page]);
 
   function increment() {
@@ -39,10 +39,11 @@ export const Characters = () => {
     <>
       <Header />
       <hr />
-      <Form
+      <CharacterFilter
         handleSaveFilterByName={handleSaveFilterByName}
         setFilterByName={setFilterByName}
         filterByName={filterByName}
+        characters={characters}
       />
       <CharacterList characters={characters} />
       <Button increment={increment} />
