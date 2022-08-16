@@ -1,5 +1,5 @@
 import { Character } from "../../types";
-import { SelectGender, SelectSpecies, SelectStatus } from "./Select";
+import { SelectSpecies } from "./Select";
 import { Container, Content } from "./style";
 
 interface FilterProps {
@@ -7,9 +7,18 @@ interface FilterProps {
   setFilterByName: (event: any) => void;
   filterByName: string;
   characters: Character[];
+  setSpecie: (event: any) => void;
+  handleSaveFilterBySpecies: () => void;
 }
 
 export function CharacterFilter(props: FilterProps) {
+  const species: string[] = [];
+  props.characters.forEach((character) => {
+    if (!species.includes(character.species)) {
+      species.push(character.species);
+    }
+  });
+
   return (
     <Container>
       <Content>
@@ -23,43 +32,35 @@ export function CharacterFilter(props: FilterProps) {
           />
         </p>
         <p>
-          <select name="species" id="species" defaultValue="0">
-            {props.characters.map((characterInformationSpecies) => {
-              return (
-                <SelectSpecies
-                  key={characterInformationSpecies.id}
-                  characterInformation={characterInformationSpecies}
-                />
-              );
-            })}
+          <select
+            name="species"
+            id="species"
+            defaultValue="0"
+            onChange={(event) => props.setSpecie(event.target.value)}
+            onClick={props.handleSaveFilterBySpecies}
+          >
+            <SelectSpecies species={species} />
           </select>
         </p>
 
-        <p>
+        {/* <p>
           <select name="gender" id="gender" defaultValue="0">
-            {props.characters.map((characterInformationGender) => {
-              return (
+            
                 <SelectGender
-                  key={characterInformationGender.id}
-                  characterInformation={characterInformationGender}
                 />
-              );
-            })}
+
           </select>
         </p>
 
         <p>
           <select name="status" id="status" defaultValue="0">
-            {props.characters.map((characterInformationStatus) => {
-              return (
+            
                 <SelectStatus
-                  key={characterInformationStatus.id}
-                  characterInformation={characterInformationStatus}
+                 
                 />
-              );
-            })}
+
           </select>
-        </p>
+        </p> */}
       </Content>
     </Container>
   );
